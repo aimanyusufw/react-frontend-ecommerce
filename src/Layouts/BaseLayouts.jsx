@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "../components/ui/Navbar";
-import Footer from "../components/ui/Footer";
+import Footer from "../Components/Ui/Section/Footer";
+import Navbar from "../Components/Ui/Section/Navbar";
 
 const BaseLayouts = ({ children, isFooterHide = false }) => {
   return (

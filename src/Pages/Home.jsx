@@ -1,5 +1,5 @@
 import React from "react";
-import BaseLayouts from "../layouts/BaseLayouts";
+import BaseLayouts from "../Layouts/BaseLayouts";
 
 const Home = () => {
   return (
