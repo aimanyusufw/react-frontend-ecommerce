@@ -1,12 +1,12 @@
 import React from "react";
 import Footer from "../Components/Ui/Section/Footer";
-import Navbar from "../Components/Ui/Section/Navbar";
+import NavbarComp from "../Components/Ui/Section/Navbar";
 
 const BaseLayouts = ({ children, isFooterHide = false }) => {
   return (
     <>
-      <Navbar />
-      <div className="w-1/2">{children}</div>
+      <NavbarComp />
+      {children}
       {!isFooterHide && <Footer />}
     </>
   );
