@@ -7,7 +7,7 @@ const Home = () => {
     <BaseLayouts>
       <section className="py-4">
         <div className="container">
-          <div className="h-56 sm:h-64 lg:h-96 2xl:h-[28rem]">
+          <div className="h-40 sm:h-72 lg:h-96 2xl:h-[28rem]">
             <Carousel indicators={false} pauseOnHover>
               <img
                 src="Banner_1.svg"
