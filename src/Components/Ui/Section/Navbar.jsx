@@ -12,8 +12,8 @@ const NavbarComp = () => {
   return (
     <Navbar rounded>
       <NavbarBrand href="https://flowbite-react.com">
-        <span className="self-center whitespace-nowrap text-xl font-bold dark:text-white">
-          TECHNova
+        <span className="self-center whitespace-nowrap text-2xl font-bold dark:text-white">
+          TechNova
         </span>
       </NavbarBrand>
       <div className="flex md:order-2 gap-2">

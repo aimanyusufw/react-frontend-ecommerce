@@ -69,6 +69,9 @@ const Footer = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 mt-8">
           <div className="flex flex-col px-4 gap-2">
+            <span className="text-xs md:text-sm">
+              Operating Hours : <span>08:00 - 18:00</span>
+            </span>
             {contact.map((data) => (
               <span className="text-xs md:text-sm">
                 {data.name} :{" "}
@@ -78,10 +81,13 @@ const Footer = () => {
               </span>
             ))}
           </div>
-          <div className="flex px-4 gap-4">
-            {socialMedia.map((data) => (
-              <a href={data.url}>{data.icon}</a>
-            ))}
+          <div className="px-4 gap-4">
+            <h1 className="mb-4 font-semibold text-2xl">TechNova</h1>
+            <div className="flex gap-4">
+              {socialMedia.map((data) => (
+                <a href={data.url}>{data.icon}</a>
+              ))}
+            </div>
           </div>
         </div>
         <div className="mt-8 py-4 border-t px-4">
