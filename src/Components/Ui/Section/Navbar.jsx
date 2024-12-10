@@ -10,7 +10,7 @@ import {
 
 const NavbarComp = () => {
   return (
-    <Navbar rounded>
+    <Navbar rounded className="px-4">
       <NavbarBrand href="https://flowbite-react.com">
         <span className="self-center whitespace-nowrap text-2xl font-bold dark:text-white">
           TechNova
