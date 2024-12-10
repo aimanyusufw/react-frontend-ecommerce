@@ -1,13 +1,15 @@
 import React from "react";
 import BaseLayouts from "../Layouts/BaseLayouts";
 import { Carousel } from "flowbite-react";
+import ProductCategories from "../Components/Ui/Section/ProductCategories";
+import NewReleaseProducts from "../Components/Ui/Section/NewReleaseProducts";
 
 const Home = () => {
   return (
     <BaseLayouts>
       <section className="py-4">
         <div className="container">
-          <div className="h-40 sm:h-72 lg:h-96 2xl:h-[28rem]">
+          <div className="px-4 h-40 sm:h-72 lg:h-96 2xl:h-[28rem]">
             <Carousel indicators={false} pauseOnHover>
               <img
                 src="Banner_1.svg"
@@ -28,6 +30,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <ProductCategories />
+      <NewReleaseProducts />
     </BaseLayouts>
   );
 };
