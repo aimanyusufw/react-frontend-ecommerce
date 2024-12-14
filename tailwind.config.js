@@ -12,7 +12,6 @@ export default {
       screens: {
         "2xl": "1280px",
       },
-      sans: ["Inter", "sans-serif"],
     },
   },
   plugins: [flowbite.plugin()],
