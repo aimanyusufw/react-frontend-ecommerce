@@ -3,6 +3,7 @@ import { FaLaptop } from "react-icons/fa";
 import { BsPcDisplay } from "react-icons/bs";
 import { FaHeadset, FaMobile } from "react-icons/fa6";
 import { IoTv, IoWatchSharp } from "react-icons/io5";
+import SectionHeader from "../../utils/SectionHeader";
 
 export default function ProductCategories() {
   const categories = [
@@ -23,20 +24,16 @@ export default function ProductCategories() {
   ];
 
   return (
-    <section className="py-12">
+    <section className="py-8 md:py-12">
       <div className="container">
-        <div className="px-4 mb-6 md:mb-8">
-          <h1 className="ps-4 border-l-4 border-black font-semibold text-xl">
-            Product Categories
-          </h1>
-        </div>
-        <div className="flex px-4 gap-10 flex-wrap">
+        <SectionHeader title={"Product Categories"} />
+        <div className="flex md:px-4 gap-10 overflow-x-auto py-2">
           {categories.map((data) => (
             <a
               href={data.url}
               className="flex flex-col items-center text-center"
             >
-              <div className="rounded-full border-black p-5 border mb-2">
+              <div className="rounded-full border-black p-5 border-2 mb-2">
                 {data.image}
               </div>
               <h4 className="text-sm md:text-base font-medium break-words">

@@ -67,7 +67,7 @@ const Footer = () => {
             </div>
           ))}
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 mt-8 gap-4">
           <div className="flex flex-col px-4 gap-2">
             <span className="text-xs md:text-sm">
               Operating Hours : <span>08:00 - 18:00</span>
@@ -91,7 +91,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-8 py-4 border-t px-4">
-          <h5 className="text-xs font-semibold md:text-sm">
+          <h5 className="text-xs font-medium md:text-sm">
             © 2024 Aiman Yusuf. All Rights Reserved.
           </h5>
         </div>

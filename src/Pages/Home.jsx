@@ -9,17 +9,17 @@ const Home = () => {
     <BaseLayouts>
       <section className="py-4">
         <div className="container">
-          <div className="px-4 h-40 sm:h-72 lg:h-96 2xl:h-[28rem]">
+          <div className="md:px-4 h-40 sm:h-72 lg:h-96 2xl:h-[28rem]">
             <Carousel indicators={false} pauseOnHover>
-              <img
-                src="Banner_1.svg"
-                className="w-full"
-                alt="Smart watch banner"
-              />
               <img
                 src="Banner_2.svg"
                 className="w-full"
                 alt="iphone new release banner"
+              />
+              <img
+                src="Banner_1.svg"
+                className="w-full"
+                alt="Smart watch banner"
               />
               <img
                 src="Banner_3.svg"
