@@ -11,14 +11,18 @@ import {
 const NavbarComp = () => {
   return (
     <Navbar rounded className="container md:px-4">
-      <NavbarBrand href="https://flowbite-react.com">
+      <NavbarBrand href="/">
         <span className="self-center whitespace-nowrap text-2xl font-bold dark:text-white">
           TechNova
         </span>
       </NavbarBrand>
       <div className="flex md:order-2 gap-2">
-        <Button color="gray">Login</Button>
-        <Button color="dark">Register</Button>
+        <Button color="gray">
+          <a href="/signin">Login</a>
+        </Button>
+        <Button color="dark">
+          <a href="/signup">Register</a>
+        </Button>
         <NavbarToggle />
       </div>
       <NavbarCollapse>
