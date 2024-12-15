@@ -2,7 +2,7 @@
 
 import { HiShoppingCart } from "react-icons/hi";
 
-export function ProductCard({ data }) {
+export function ProductCard({ data, isNew = false }) {
   return (
     <div className="border rounded-lg shadow-sm px-4 py-4 md:py-6">
       <a href="#">
@@ -15,9 +15,11 @@ export function ProductCard({ data }) {
             alt=""
             className="h-full w-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
           />
-          <span className="absolute bottom-2 text-sm bg-red-200 bg-opacity-50 left-2 px-2 py-1 rounded-md border border-red-500 text-red-500">
-            New
-          </span>
+          {isNew && (
+            <span className="absolute bottom-2 text-sm bg-red-200 bg-opacity-50 left-2 px-2 py-1 rounded-md border border-red-500 text-red-500">
+              New
+            </span>
+          )}
           <button
             onClick={() => alert("Test")}
             className="absolute top-1 text-sm bg-slate-200 bg-opacity-50 right-1 p-2 rounded-md border border-slate-500 text-slate-500"
