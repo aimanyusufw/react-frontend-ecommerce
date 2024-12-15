@@ -38,7 +38,7 @@ export default function NewReleaseProducts() {
         <SectionHeader title={"New Products"} />
         <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:px-4 gap-2 flex-wrap">
           {products.map((data) => (
-            <ProductCard data={data} />
+            <ProductCard data={data} isNew={true} />
           ))}
         </div>
       </div>
