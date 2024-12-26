@@ -52,12 +52,13 @@ const Footer = () => {
       <div className="container">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4 gap-6 border-t py-4">
           {datas.map((data) => (
-            <div className="flex flex-col gap-2">
+            <div key={data.name} className="flex flex-col gap-2">
               <h4 className="font-semibold capitalize text-lg md:text-xl">
                 {data.name}
               </h4>
               {data.data.map((subData) => (
                 <a
+                  key={subData}
                   href="#"
                   className="text-xs md:text-sm font-medium  text-slate-600"
                 >
@@ -73,7 +74,7 @@ const Footer = () => {
               Operating Hours : <span>08:00 - 18:00</span>
             </span>
             {contact.map((data) => (
-              <span className="text-xs md:text-sm">
+              <span key={data.name} className="text-xs md:text-sm">
                 {data.name} :{" "}
                 <a href="#" className="text-blue-500 underline">
                   {data.detail}
@@ -85,7 +86,9 @@ const Footer = () => {
             <h1 className="mb-4 font-semibold text-2xl">TechNova</h1>
             <div className="flex gap-4">
               {socialMedia.map((data) => (
-                <a href={data.url}>{data.icon}</a>
+                <a key={data.name} href={data.url}>
+                  {data.icon}
+                </a>
               ))}
             </div>
           </div>

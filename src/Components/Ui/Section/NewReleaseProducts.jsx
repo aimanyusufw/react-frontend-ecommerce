@@ -1,6 +1,6 @@
 import React from "react";
 import { ProductCard } from "../Cards/ProductCard";
-import SectionHeader from "../../utils/SectionHeader";
+import SectionHeader from "../../Utils/SectionHeader";
 
 export default function NewReleaseProducts() {
   const products = [

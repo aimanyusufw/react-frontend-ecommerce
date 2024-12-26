@@ -5,7 +5,7 @@ import { HiShoppingCart } from "react-icons/hi";
 export function ProductCard({ data, isNew = false }) {
   return (
     <div className="border rounded-lg shadow-sm px-4 py-4 md:py-6">
-      <a href="#">
+      <a href="/products/detail">
         <div className="h-44 md:h-56 relative mb-4 overflow-hidden group">
           <img
             src={
@@ -28,10 +28,10 @@ export function ProductCard({ data, isNew = false }) {
           </button>
         </div>
       </a>
-      <span className="bg-slate-500 text-white px-3 py-2 rounded-full text-sm font-medium">
+      <span className="bg-slate-500 text-white px-2 py-1 rounded-full text-sm font-medium">
         {data.category ?? "Uncategorize"}
       </span>
-      <a href="#">
+      <a href="/products/detail">
         <h5 className="text-base lg:text-xl font-semibold tracking-tight text-gray-900 dark:text-white mt-5 line-clamp-2">
           {data.title ?? "Unilited Products"}
         </h5>

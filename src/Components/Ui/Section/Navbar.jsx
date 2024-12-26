@@ -18,19 +18,19 @@ const NavbarComp = () => {
       </NavbarBrand>
       <div className="flex md:order-2 gap-2">
         <Button color="gray">
-          <a href="/signin">Login</a>
+          <a href="/signin">Sign In</a>
         </Button>
         <Button color="dark">
-          <a href="/signup">Register</a>
+          <a href="/signup">Sign Up</a>
         </Button>
         <NavbarToggle />
       </div>
       <NavbarCollapse>
-        <NavbarLink href="#" active>
+        <NavbarLink href="/" active>
           Home
         </NavbarLink>
-        <NavbarLink href="#">Products</NavbarLink>
-        <NavbarLink href="#">Contant Us</NavbarLink>
+        <NavbarLink href="/products">Products</NavbarLink>
+        <NavbarLink href="/contatc-us">Contant Us</NavbarLink>
       </NavbarCollapse>
     </Navbar>
   );

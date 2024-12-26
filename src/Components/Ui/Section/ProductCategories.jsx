@@ -1,40 +1,65 @@
 import React from "react";
-import { FaLaptop } from "react-icons/fa";
-import { BsPcDisplay } from "react-icons/bs";
-import { FaHeadset, FaMobile } from "react-icons/fa6";
-import { IoTv, IoWatchSharp } from "react-icons/io5";
-import SectionHeader from "../../utils/SectionHeader";
 
 export default function ProductCategories() {
   const categories = [
-    { name: "Laptop", url: "#", image: <FaLaptop className="w-5 h-5" /> },
+    {
+      name: "Laptop",
+      url: "#",
+      image:
+        "https://dlcdnwebimgs.asus.com/gain/d5e3167c-efa8-46ce-bd78-65a4e99af3f6/w800",
+    },
     {
       name: "PC",
       url: "#",
-      image: <BsPcDisplay className="w-5 h-5" />,
+      image:
+        "https://macstore.id/wp-content/uploads/2021/01/mac-mini-202011-gallery-3-1.jpeg",
     },
-    { name: "Phone", url: "#", image: <FaMobile className="w-5 h-5" /> },
+    {
+      name: "Phone",
+      url: "#",
+      image:
+        "https://ibox.co.id/_next/image?url=https%3A%2F%2Fcdnpro.eraspace.com%2Fmedia%2Fcatalog%2Fproduct%2Fa%2Fp%2Fapple_iphone_15_blue_1.jpg&w=3840&q=45",
+    },
     {
       name: "Smart Watch",
       url: "#",
-      image: <IoWatchSharp className="w-5 h-5" />,
+      image:
+        "https://images.samsung.com/is/image/samsung/p6pim/id/sm-r861nzkaxse/gallery/id-galaxy-watch-fe-r861-sm-r861nzkaxse-thumb-542345719?$344_344_PNG$",
     },
-    { name: "Television", url: "#", image: <IoTv className="w-5 h-5" /> },
-    { name: "Headset", url: "#", image: <FaHeadset className="w-5 h-5" /> },
+    {
+      name: "Television",
+      url: "#",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDarj-2djkEz1w0wKtFUFBkTrOUpBRlyYF3A&s",
+    },
+    {
+      name: "Headset",
+      url: "#",
+      image: "https://els.id/wp-content/uploads/2023/11/Olike-H2-1.jpg",
+    },
   ];
 
   return (
     <section className="py-8 md:py-12">
       <div className="container">
-        <SectionHeader title={"Product Categories"} />
+        <div className="md:px-4 mb-6 md:mb-8">
+          <h1 className="ps-4 border-l-4 border-black font-bold text-xl md:text-2xl">
+            Product Categories
+          </h1>
+        </div>
         <div className="flex md:px-4 gap-10 overflow-x-auto py-2">
           {categories.map((data) => (
             <a
+              key={data.name}
               href={data.url}
               className="flex flex-col items-center text-center"
             >
-              <div className="rounded-full border-black p-5 border-2 mb-2">
-                {data.image}
+              <div className="relative w-20 h-20 mb-2 overflow-hidden p-2 group">
+                <img
+                  src={data.image || "https://via.placeholder.com/40"}
+                  alt={data.alt || "User profile"}
+                  className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-300"
+                />
               </div>
               <h4 className="text-sm md:text-base font-medium break-words">
                 {data.name}
