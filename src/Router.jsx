@@ -1,9 +1,11 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./Pages/Home";
-import Signup from "./Pages/Auth/Signup";
-import Signin from "./Pages/Auth/Signin";
-import Products from "./Pages/Products";
-import DetailProduct from "./Pages/DetailProduct";
+import loadable from "@loadable/component";
+
+const Home = loadable(() => import("./Pages/Home"));
+const Signup = loadable(() => import("./Pages/Auth/Signup"));
+const Signin = loadable(() => import("./Pages/Auth/Signin"));
+const Products = loadable(() => import("./Pages/Products"));
+const DetailProduct = loadable(() => import("./Pages/DetailProduct"));
 
 const route = createBrowserRouter([
   {
