@@ -15,7 +15,12 @@ const Signup = () => {
               <div className="mb-2 block">
                 <Label htmlFor="name" value="Your Name" />
               </div>
-              <TextInput id="name" type="text" required />
+              <TextInput
+                id="name"
+                type="text"
+                placeholder="Jhone doe"
+                required
+              />
             </div>
             <div>
               <div className="mb-2 block">
@@ -24,7 +29,7 @@ const Signup = () => {
               <TextInput
                 id="email1"
                 type="email"
-                placeholder="name@flowbite.com"
+                placeholder="name@example.com"
                 required
               />
             </div>
