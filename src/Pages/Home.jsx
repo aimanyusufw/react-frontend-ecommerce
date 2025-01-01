@@ -102,7 +102,7 @@ const Home = () => {
         </div>
       </section>
       <ProductsSection title={"Discover Products"} data={products} />
-      <ProductsSection title={"Promo 20% OFF"} data={productsDis} />
+      <ProductsSection title={"Discount Products"} data={productsDis} />
       <section className="py-12">
         <div className="container">
           <div className="md:px-4 grid grid-cols-1 md:grid-cols-2 gap-6">

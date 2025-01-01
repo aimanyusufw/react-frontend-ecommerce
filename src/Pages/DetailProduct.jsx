@@ -85,7 +85,7 @@ const DetailProduct = () => {
         title: "iphone_13_midnight_1",
         url: "http://localhost:8000/storage/media/02af3861-8aae-40b9-bbbd-a441651aca12.webp",
         thumbnail_url:
-          "https://ibox.co.id/_next/image?url=https%3A%2F%2Fcdnpro.eraspace.com%2Fmedia%2Fcatalog%2Fproduct%2Fa%2Fp%2Fapple_iphone_15_blue_1.jpg&w=3840&q=45",
+          "https://dlcdnwebimgs.asus.com/gain/d5e3167c-efa8-46ce-bd78-65a4e99af3f6/w800",
         medium_url:
           "http://localhost:8000/curator/media/02af3861-8aae-40b9-bbbd-a441651aca12.webp?w=640&h=640&fit=crop&fm=webp&s=2ca846135fd8ad3da46c236f4a522f2e",
         large_url:
@@ -124,9 +124,9 @@ const DetailProduct = () => {
   return (
     <BaseLayouts>
       <div className="py-12 min-h-screen">
-        <div className="container space-y-8">
-          <div className="md:px-4 grid col-span-1 md:grid-cols-2 gap-4">
-            <div className="w-full">
+        <div className="container">
+          <div className="md:px-4 grid col-span-1 md:grid-cols-2 md:gap-2  gap-4">
+            <div className="w-full mb-8 md:mb-0">
               <img
                 src={featuredImage}
                 alt=""
@@ -138,7 +138,7 @@ const DetailProduct = () => {
                     <img
                       src={data.thumbnail_url}
                       alt={data.alt}
-                      className={`rounded-md w-24 ${
+                      className={`rounded-md w-14 md:w-20 ${
                         featuredImage == data.thumbnail_url
                           ? "border-2 border-black"
                           : "border-2 border-white"
@@ -151,13 +151,21 @@ const DetailProduct = () => {
             <div className="w-full space-y-6">
               <div className="flex gap-2">
                 {product.categories.map((data) => (
-                  <span>{data.name}</span>
+                  <span className="border rounded-full px-2 py-1 text-xs md:text-sm">
+                    {data.name}
+                  </span>
                 ))}
               </div>
-              <h1 className="font-medium text-4xl">{product.title}</h1>
-              <p className="text-sm text-gray-600 leading-relaxed max-w-md">
+              <h1 className="font-medium text-3xl">{product.title}</h1>
+              <p className="text-xs md:text-sm text-gray-600 leading-relaxed max-w-md">
                 {product.excerpt}
               </p>
+              <h5 className="text-xs md:text-sm font-medium">
+                Weight : {product.weight / 1000} Kg
+              </h5>
+              <h5 className="text-xs md:text-sm font-medium">
+                Stock : {product.stock}
+              </h5>
               <div className="w-32 flex p-1.5 rounded-lg border-2">
                 <button
                   onClick={() =>
@@ -168,9 +176,9 @@ const DetailProduct = () => {
                     quantity == 1 ? "cursor-not-allowed" : ""
                   }`}
                 >
-                  <FaMinus className="w-3 h-3" />
+                  <FaMinus className="w-2 h-2 md:w-3 md:h-3" />
                 </button>
-                <div className="w-[40%] flex justify-center items-center text-lg">
+                <div className="w-[40%] flex justify-center items-center text-sm md:text-lg">
                   {quantity}
                 </div>
                 <button
@@ -184,34 +192,40 @@ const DetailProduct = () => {
                     quantity == product.stock ? "cursor-not-allowed" : ""
                   }`}
                 >
-                  <FaPlus className="w-3 h-3" />
+                  <FaPlus className="w-2 h-2 md:w-3 md:h-3" />
                 </button>
               </div>
               <div className="flex justify-between items-center">
                 <div className="space-y-2">
                   {product.sale_price != product.price && (
-                    <h3 className="text-red-500 line-through">
+                    <h3 className="text-xs md:text-base text-red-500 line-through">
                       Rp {(product.price * quantity).toLocaleString("id-ID")}
                     </h3>
                   )}
-                  <h1 className="font-medium text-3xl">
+                  <h1 className="font-medium text-xl md:text-3xl">
                     Rp {(product.sale_price * quantity).toLocaleString("id-ID")}
                   </h1>
                 </div>
-                {discount !== 0 ? <h1>Discount {discount}%</h1> : ""}
+                {discount !== 0 ? (
+                  <h1 className="text-xs md:text-sm font-medium">
+                    Discount {discount}%
+                  </h1>
+                ) : (
+                  ""
+                )}
               </div>
-              <button className="bg-black rounded-md text-white w-full py-4 text-sm font-medium flex justify-center items-center">
+              <button className="bg-black rounded-md text-white w-full py-4 text-xs md:text-sm font-medium flex justify-center items-center">
                 <FaCartShopping className="me-2" />
                 Add To Cart
               </button>
             </div>
           </div>
           <div
-            className="md:px-4"
+            className="mt-5 md:mt-8 md:px-4"
             dangerouslySetInnerHTML={{ __html: product.description }}
           ></div>
-          <ProductsSection title={"Recomended Product"} data={products} />
         </div>
+        <ProductsSection title={"Recomended Product"} data={products} />
       </div>
     </BaseLayouts>
   );

@@ -7,6 +7,7 @@ import {
   NavbarLink,
   NavbarToggle,
 } from "flowbite-react";
+import { FaCartShopping } from "react-icons/fa6";
 
 const NavbarComp = () => {
   return (
@@ -16,12 +17,15 @@ const NavbarComp = () => {
           TechNova
         </span>
       </NavbarBrand>
-      <div className="flex md:order-2 gap-2">
+      <div className="flex items-center md:order-2 gap-2">
+        <button className="me-2 relative py-3">
+          <FaCartShopping className="w-5 h-5" />
+          <span className="absolute top-1 left-2 px-1.5  bg-red-500 rounded-full text-xs text-white">
+            1
+          </span>
+        </button>
         <Button color="gray">
-          <a href="/signin">Sign In</a>
-        </Button>
-        <Button color="dark">
-          <a href="/signup">Sign Up</a>
+          <a href="/signup">Join Now</a>
         </Button>
         <NavbarToggle />
       </div>

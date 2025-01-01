@@ -6,10 +6,8 @@ const Signin = () => {
   return (
     <BaseLayouts>
       <div className="container min-h-[92vh] flex justify-center items-center">
-        <div className="px-5 py-8 border rounded-md w-full md:w-2/3 lg:w-2/5">
-          <h1 className="font-semibold text-2xl lg:text-3xl mb-8 text-center">
-            Sign In
-          </h1>
+        <div className="px-5 py-8 md:border rounded-md w-full md:w-2/3 lg:w-2/5">
+          <h1 className="font-semibold text-3xl mb-8 text-center">Sign In</h1>
           <form className="flex max-w-md flex-col gap-4">
             <div>
               <div className="mb-2 block">
