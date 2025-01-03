@@ -6,6 +6,7 @@ const Signup = loadable(() => import("./Pages/Auth/Signup"));
 const Signin = loadable(() => import("./Pages/Auth/Signin"));
 const Products = loadable(() => import("./Pages/Products"));
 const DetailProduct = loadable(() => import("./Pages/DetailProduct"));
+const Cart = loadable(() => import("./Pages/Cart"));
 
 const route = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const route = createBrowserRouter([
   {
     path: "/signup",
     element: <Signup />,
+  },
+  {
+    path: "/cart",
+    element: <Cart />,
   },
   {
     path: "/signin",

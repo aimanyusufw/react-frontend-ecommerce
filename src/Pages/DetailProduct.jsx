@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import BaseLayouts from "../Layouts/BaseLayouts";
-import { FaCartShopping, FaMinus, FaPlus } from "react-icons/fa6";
+import { FaCartShopping } from "react-icons/fa6";
 import ProductsSection from "../Components/Ui/Section/ProductsSection";
+import QuantityPicker from "../Components/Utils/QuantityPicker";
 
 const DetailProduct = () => {
   const products = [
@@ -134,7 +135,10 @@ const DetailProduct = () => {
               />
               <div className="flex gap-2 overflow-x-scroll">
                 {product.images.map((data) => (
-                  <button onClick={() => setFeaturedImage(data.thumbnail_url)}>
+                  <button
+                    key={data.thumbnail_url}
+                    onClick={() => setFeaturedImage(data.thumbnail_url)}
+                  >
                     <img
                       src={data.thumbnail_url}
                       alt={data.alt}
@@ -151,7 +155,10 @@ const DetailProduct = () => {
             <div className="w-full space-y-6">
               <div className="flex gap-2">
                 {product.categories.map((data) => (
-                  <span className="border rounded-full px-2 py-1 text-xs md:text-sm">
+                  <span
+                    key={data.slug}
+                    className="border rounded-full px-2 py-1 text-xs md:text-sm"
+                  >
                     {data.name}
                   </span>
                 ))}
@@ -166,44 +173,20 @@ const DetailProduct = () => {
               <h5 className="text-xs md:text-sm font-medium">
                 Stock : {product.stock}
               </h5>
-              <div className="w-32 flex p-1.5 rounded-lg border-2">
-                <button
-                  onClick={() =>
-                    setQuantity(quantity == 1 ? quantity : quantity - 1)
-                  }
-                  disabled={quantity == 1}
-                  className={`w-[30%] flex justify-center items-center py-3 hover:bg-gray-300 transition-colors duration-300 rounded-md ${
-                    quantity == 1 ? "cursor-not-allowed" : ""
-                  }`}
-                >
-                  <FaMinus className="w-2 h-2 md:w-3 md:h-3" />
-                </button>
-                <div className="w-[40%] flex justify-center items-center text-sm md:text-lg">
-                  {quantity}
-                </div>
-                <button
-                  disabled={quantity == product.stock}
-                  onClick={() =>
-                    setQuantity(
-                      quantity == product.stock ? quantity : quantity + 1
-                    )
-                  }
-                  className={`w-[30%] flex justify-center items-center py-3 hover:bg-gray-300 transition-colors duration-300 rounded-md ${
-                    quantity == product.stock ? "cursor-not-allowed" : ""
-                  }`}
-                >
-                  <FaPlus className="w-2 h-2 md:w-3 md:h-3" />
-                </button>
-              </div>
+              <QuantityPicker
+                quantity={quantity}
+                setQuantity={setQuantity}
+                stock={product.stock}
+              />
               <div className="flex justify-between items-center">
                 <div className="space-y-2">
                   {product.sale_price != product.price && (
                     <h3 className="text-xs md:text-base text-red-500 line-through">
-                      Rp {(product.price * quantity).toLocaleString("id-ID")}
+                      Rp {product.price.toLocaleString("id-ID")}
                     </h3>
                   )}
                   <h1 className="font-medium text-xl md:text-3xl">
-                    Rp {(product.sale_price * quantity).toLocaleString("id-ID")}
+                    Rp {product.sale_price.toLocaleString("id-ID")}
                   </h1>
                 </div>
                 {discount !== 0 ? (

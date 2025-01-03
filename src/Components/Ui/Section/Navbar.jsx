@@ -18,12 +18,12 @@ const NavbarComp = () => {
         </span>
       </NavbarBrand>
       <div className="flex items-center md:order-2 gap-2">
-        <button className="me-2 relative py-3">
+        <a href="/cart" className="me-2 relative py-3">
           <FaCartShopping className="w-5 h-5" />
           <span className="absolute top-1 left-2 px-1.5  bg-red-500 rounded-full text-xs text-white">
             1
           </span>
-        </button>
+        </a>
         <Button color="gray">
           <a href="/signup">Join Now</a>
         </Button>

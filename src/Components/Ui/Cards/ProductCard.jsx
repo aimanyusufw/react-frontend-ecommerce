@@ -30,7 +30,7 @@ export function ProductCard({ data, isNew = false }) {
           </div>
         </a>
         <a href="/products/detail">
-          <h5 className="text-sm lg:text-lg font-semibold tracking-tight text-gray-900 dark:text-white mt-5 line-clamp-2">
+          <h5 className="text-sm lg:text-lg font-medium tracking-tight text-gray-900 dark:text-white mt-5 line-clamp-2">
             {data.title ?? "Unilited Products"}
           </h5>
         </a>
