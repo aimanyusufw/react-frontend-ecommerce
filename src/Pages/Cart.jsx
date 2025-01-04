@@ -90,13 +90,13 @@ const Cart = () => {
                       <img
                         src={data.img}
                         alt={data.title}
-                        className="w-24 md:w-32"
+                        className="w-12 md:w-24 lg:w-32"
                       />
-                      <div className="w-3/5 ms-4 space-y-2">
-                        <h1 className="font-medium text-base md:text-lg truncate">
+                      <div className="w-2/5 md:w-3/5 ms-2 md:ms-4 space-y-1 md:space-y-2">
+                        <h1 className="font-medium text-sm md:text-lg truncate">
                           {data.title}
                         </h1>
-                        <h5 className="font-medium text-sm text-gray-500">
+                        <h5 className="font-medium text-xs md:text-sm text-gray-500">
                           Stock : {data.stock}
                         </h5>
                         <div>
