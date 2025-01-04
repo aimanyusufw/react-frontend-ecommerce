@@ -3,10 +3,10 @@ import { ProductCard } from "../Cards/ProductCard";
 
 export default function ProductsSection({ title, data }) {
   return (
-    <section className="py-5 md:py-12">
+    <section className="py-2 md:py-8">
       <div className="container">
         <div className="md:px-4 mb-6 md:mb-8">
-          <h1 className="ps-4 border-l-4 border-black font-bold text-xl md:text-2xl">
+          <h1 className="ps-4 border-l-4 border-black font-bold text-base md:text-xl lg:text-2xl">
             {title ?? "Unilited Section"}
           </h1>
         </div>

@@ -40,10 +40,10 @@ export default function ProductCategories() {
   ];
 
   return (
-    <section className="py-8 md:py-12">
+    <section className="py-2 md:py-8">
       <div className="container">
         <div className="md:px-4 mb-6 md:mb-8">
-          <h1 className="ps-4 border-l-4 border-black font-bold text-xl md:text-2xl">
+          <h1 className="ps-4 border-l-4 border-black font-bold text-base md:text-xl lg:text-2xl">
             Product Categories
           </h1>
         </div>
@@ -54,14 +54,14 @@ export default function ProductCategories() {
               href={data.url}
               className="flex flex-col items-center text-center"
             >
-              <div className="relative w-20 h-20 mb-2 overflow-hidden p-2 group">
+              <div className="relative w-16 h-16 md:w-20 md:h-20 overflow-hidden p-2 group">
                 <img
                   src={data.image || "https://via.placeholder.com/40"}
                   alt={data.alt || "User profile"}
                   className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
-              <h4 className="text-sm md:text-base font-medium break-words">
+              <h4 className="text-xs md:text-base font-medium break-words">
                 {data.name}
               </h4>
             </a>
