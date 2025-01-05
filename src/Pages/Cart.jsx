@@ -65,6 +65,8 @@ const Cart = () => {
 
   const tax = discountPrice * (11 / 100);
 
+  const finalPrices = [totalPrice, totalPrice - discountPrice, tax, 100000];
+
   return (
     <BaseLayouts>
       <section className="min-h-screen">
@@ -159,30 +161,14 @@ const Cart = () => {
                   ))}
                 </div>
                 <div className="space-y-4 border-b py-5">
-                  <div className="flex justify-between">
-                    <h1 className="text-sm font-medium">Total Price</h1>
-                    <h3 className="font-medium text-sm">
-                      Rp {totalPrice.toLocaleString("id-ID")}
-                    </h3>
-                  </div>
-                  <div className="flex justify-between">
-                    <h1 className="text-sm font-medium">Discount</h1>
-                    <h3 className="font-medium text-sm">
-                      Rp {(totalPrice - discountPrice).toLocaleString("id-ID")}
-                    </h3>
-                  </div>
-                  <div className="flex justify-between">
-                    <h1 className="text-sm font-medium">Tax</h1>
-                    <h3 className="font-medium text-sm">
-                      Rp {tax.toLocaleString("id-ID")}
-                    </h3>
-                  </div>
-                  <div className="flex justify-between">
-                    <h1 className="text-sm font-medium">Shipping</h1>
-                    <h3 className="font-medium text-sm">
-                      Rp {(100000).toLocaleString("id-ID")}
-                    </h3>
-                  </div>
+                  {finalPrices.map((data) => (
+                    <div className="flex justify-between">
+                      <h1 className="text-sm font-medium">Total Price</h1>
+                      <h3 className="font-medium text-sm">
+                        Rp {data.toLocaleString("id-ID")}
+                      </h3>
+                    </div>
+                  ))}
                 </div>
                 <div className="flex justify-between py-8">
                   <h1 className="font-medium text-base md:text-lg">

@@ -11,7 +11,7 @@ import { FaCartShopping } from "react-icons/fa6";
 
 const NavbarComp = () => {
   return (
-    <Navbar rounded className="container md:px-4">
+    <Navbar rounded className="px-0 md:px-4">
       <NavbarBrand href="/">
         <span className="self-center whitespace-nowrap text-2xl font-bold dark:text-white">
           TechNova
