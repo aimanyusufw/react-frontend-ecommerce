@@ -13,9 +13,7 @@ const NavbarComp = () => {
   return (
     <Navbar rounded className="px-0 md:px-4">
       <NavbarBrand href="/">
-        <span className="self-center whitespace-nowrap text-2xl font-bold dark:text-white">
-          TechNova
-        </span>
+        <img src="/Logo.svg" className="h-6 md:h-8" alt="" />
       </NavbarBrand>
       <div className="flex items-center md:order-2 gap-2">
         <a href="/cart" className="me-2 relative py-3">
