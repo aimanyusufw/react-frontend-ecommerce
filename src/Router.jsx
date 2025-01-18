@@ -7,6 +7,7 @@ const Signin = loadable(() => import("./Pages/Auth/Signin"));
 const Products = loadable(() => import("./Pages/Products"));
 const DetailProduct = loadable(() => import("./Pages/DetailProduct"));
 const Cart = loadable(() => import("./Pages/Cart"));
+const CheckOut = loadable(() => import("./Pages/CheckOut"));
 const NotFound = loadable(() => import("./Pages/Errors/NotFound"));
 
 const route = createBrowserRouter([
@@ -21,6 +22,10 @@ const route = createBrowserRouter([
   {
     path: "/cart",
     element: <Cart />,
+  },
+  {
+    path: "/cart/checkout",
+    element: <CheckOut />,
   },
   {
     path: "/signin",
