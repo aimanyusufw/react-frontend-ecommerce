@@ -1,44 +1,7 @@
 import React from "react";
+import { categories } from "../../../dummy/data";
 
 export default function ProductCategories() {
-  const categories = [
-    {
-      name: "Laptop",
-      url: "#",
-      image:
-        "https://dlcdnwebimgs.asus.com/gain/d5e3167c-efa8-46ce-bd78-65a4e99af3f6/w800",
-    },
-    {
-      name: "PC",
-      url: "#",
-      image:
-        "https://macstore.id/wp-content/uploads/2021/01/mac-mini-202011-gallery-3-1.jpeg",
-    },
-    {
-      name: "Phone",
-      url: "#",
-      image:
-        "https://ibox.co.id/_next/image?url=https%3A%2F%2Fcdnpro.eraspace.com%2Fmedia%2Fcatalog%2Fproduct%2Fa%2Fp%2Fapple_iphone_15_blue_1.jpg&w=3840&q=45",
-    },
-    {
-      name: "Smart Watch",
-      url: "#",
-      image:
-        "https://images.samsung.com/is/image/samsung/p6pim/id/sm-r861nzkaxse/gallery/id-galaxy-watch-fe-r861-sm-r861nzkaxse-thumb-542345719?$344_344_PNG$",
-    },
-    {
-      name: "Television",
-      url: "#",
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDarj-2djkEz1w0wKtFUFBkTrOUpBRlyYF3A&s",
-    },
-    {
-      name: "Headset",
-      url: "#",
-      image: "https://els.id/wp-content/uploads/2023/11/Olike-H2-1.jpg",
-    },
-  ];
-
   return (
     <section className="py-2 md:py-8">
       <div className="container">
