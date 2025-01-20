@@ -44,7 +44,7 @@ const NavbarComp = () => {
               name@flowbite.com
             </span>
           </Dropdown.Header>
-          <Dropdown.Item>Profile</Dropdown.Item>
+          <Dropdown.Item href="/profile">Profile</Dropdown.Item>
           <Dropdown.Item>Order</Dropdown.Item>
           <Dropdown.Item href="/cart">Cart</Dropdown.Item>
           <Dropdown.Divider />
