@@ -8,6 +8,7 @@ const Products = loadable(() => import("./Pages/Products"));
 const DetailProduct = loadable(() => import("./Pages/DetailProduct"));
 const Cart = loadable(() => import("./Pages/Cart"));
 const CheckOut = loadable(() => import("./Pages/CheckOut"));
+const Profile = loadable(() => import("./Pages/Auth/Profile"));
 const NotFound = loadable(() => import("./Pages/Errors/NotFound"));
 
 const route = createBrowserRouter([
@@ -38,6 +39,10 @@ const route = createBrowserRouter([
   {
     path: "/products/detail",
     element: <DetailProduct />,
+  },
+  {
+    path: "/profile",
+    element: <Profile />,
   },
   {
     path: "*",
