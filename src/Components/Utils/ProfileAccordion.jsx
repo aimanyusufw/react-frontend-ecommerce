@@ -5,7 +5,7 @@ const ProfileAccordion = ({ children, icon, name, defaultOpen = false }) => {
   const [isOpen, setIsOpen] = useState(defaultOpen);
 
   return (
-    <div className="mb-4">
+    <div>
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={`flex items-center justify-between py-3 hover:bg-neutral-100 px-5 rounded-md transition-colors mb-4 w-full ${
@@ -18,7 +18,16 @@ const ProfileAccordion = ({ children, icon, name, defaultOpen = false }) => {
         </div>
         <FaChevronDown className={`w-3 h-3 ${isOpen && "rotate-180"}`} />
       </button>
-      {isOpen && children}
+      <div
+        className={`grid overflow-hidden transition-all duration-200 ease-in-out ${
+          isOpen
+            ? "grid-rows-[1fr] opacity-100 px-5 pb-5"
+            : "grid-rows-[0fr] opacity-0"
+        }`}
+      >
+        {" "}
+        <div className="overflow-hidden">{children}</div>
+      </div>
     </div>
   );
 };
