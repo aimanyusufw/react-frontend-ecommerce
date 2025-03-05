@@ -9,6 +9,7 @@ import {
   FaUserGear,
 } from "react-icons/fa6";
 import ProfileAccordion from "../../Components/Utils/ProfileAccordion";
+import OrderItemCard from "../../Components/Ui/Cards/OrderItemCard";
 
 const Profile = () => {
   return (
@@ -48,52 +49,20 @@ const Profile = () => {
                   <h1>INV/2123123/123123</h1>
                 </div>
                 <div className="space-y-6">
-                  <div className="flex justify-between items-center">
-                    <div className="flex">
-                      <img
-                        src="https://dlcdnwebimgs.asus.com/gain/d5e3167c-efa8-46ce-bd78-65a4e99af3f6/w800"
-                        alt=""
-                        className="w-32 bg-slate-200 rounded-sm"
-                      />
-                      <div className="ms-4 space-y-3">
-                        <h1 className="font-medium text-sm md:text-lg ">
-                          ASUS TUF GAMING A16
-                        </h1>
-                        <p className="font-medium text-xs md:text-sm">
-                          Quantitiy : 1
-                        </p>
-                        <h2 className="font-medium text-xs md:text-sm">
-                          Rp. 16.000.000,00
-                        </h2>
-                      </div>
-                    </div>
-                    <h2 className="font-semibold text-base md:text-lg">
-                      Rp. 16.000.000,00
-                    </h2>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <div className="flex">
-                      <img
-                        src="https://dlcdnwebimgs.asus.com/gain/d5e3167c-efa8-46ce-bd78-65a4e99af3f6/w800"
-                        alt=""
-                        className="w-32 bg-slate-200 rounded-sm"
-                      />
-                      <div className="ms-4 space-y-3">
-                        <h1 className="font-medium text-sm md:text-lg ">
-                          ASUS TUF GAMING A16
-                        </h1>
-                        <p className="font-medium text-xs md:text-sm">
-                          Quantitiy : 1
-                        </p>
-                        <h2 className="font-medium text-xs md:text-sm">
-                          Rp. 16.000.000,00
-                        </h2>
-                      </div>
-                    </div>
-                    <h2 className="font-semibold text-base md:text-lg">
-                      Rp. 16.000.000,00
-                    </h2>
-                  </div>
+                  <OrderItemCard
+                    data={{
+                      name: "ASUS TUF GAMING A16",
+                      price: 16000000,
+                      quantity: 2,
+                    }}
+                  />
+                  <OrderItemCard
+                    data={{
+                      name: "ASUS TUF GAMING A16",
+                      price: 16000000,
+                      quantity: 1,
+                    }}
+                  />
                   <button
                     href="/"
                     className="py-3 px-6 border-2 font-medium border-black rounded-lg"
