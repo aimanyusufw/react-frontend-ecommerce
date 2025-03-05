@@ -83,7 +83,13 @@ const Footer = () => {
             ))}
           </div>
           <div className="px-4 gap-4">
-            <h1 className="mb-4 font-semibold text-2xl">TechNova</h1>
+            <h1 className="mb-4 font-semibold text-2xl">
+              <img
+                src="/Logo.svg"
+                className="mr-3 h-6 sm:h-9"
+                alt="Flowbite React Logo"
+              />
+            </h1>
             <div className="flex gap-4">
               {socialMedia.map((data) => (
                 <a key={data.name} href={data.url}>
