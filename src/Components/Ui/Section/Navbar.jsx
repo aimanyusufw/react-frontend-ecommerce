@@ -45,7 +45,7 @@ const NavbarComp = () => {
             </span>
           </Dropdown.Header>
           <Dropdown.Item href="/profile">Profile</Dropdown.Item>
-          <Dropdown.Item>Order</Dropdown.Item>
+          <Dropdown.Item href="/order">Order</Dropdown.Item>
           <Dropdown.Item href="/cart">Cart</Dropdown.Item>
           <Dropdown.Divider />
           <Dropdown.Item>Sign out</Dropdown.Item>

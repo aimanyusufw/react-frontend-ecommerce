@@ -35,50 +35,10 @@ const Profile = () => {
             </div>
           </div>
           <ProfileAccordion
-            name={"Order"}
-            icon={<FaCartShopping className="w-6 h-6 text-neutral-700" />}
-            defaultOpen={true}
+            name={"Account Information"}
+            icon={<FaUserGear className="w-6 h-6 text-neutral-700" />}
           >
-            <div className="w-full">
-              <div className="p-5 border rounded-md">
-                <div className="flex gap-4 mb-6">
-                  <h1>23 Februari 2025 </h1>
-                  <span className="rounded-full font-medium text-xs px-3 py-1 bg-yellow-300 text-yellow-700">
-                    Shipped
-                  </span>
-                  <h1>INV/2123123/123123</h1>
-                </div>
-                <div className="space-y-6">
-                  <OrderItemCard
-                    data={{
-                      name: "ASUS TUF GAMING A16",
-                      price: 16000000,
-                      quantity: 2,
-                    }}
-                  />
-                  <OrderItemCard
-                    data={{
-                      name: "ASUS TUF GAMING A16",
-                      price: 16000000,
-                      quantity: 1,
-                    }}
-                  />
-                  <button
-                    href="/"
-                    className="py-3 px-6 border-2 font-medium border-black rounded-lg"
-                  >
-                    Transaction Detail
-                    <FaArrowRight className="inline ms-4" />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </ProfileAccordion>
-          <ProfileAccordion
-            name={"Billing Information"}
-            icon={<FaMoneyBill className="w-6 h-6 text-neutral-700" />}
-          >
-            <h1>Billing Information</h1>
+            <h1>Account Information</h1>
           </ProfileAccordion>
           <ProfileAccordion
             name={"Shipping Address"}
@@ -87,10 +47,10 @@ const Profile = () => {
             <h1>Shipping Address</h1>
           </ProfileAccordion>
           <ProfileAccordion
-            name={"Account Information"}
-            icon={<FaUserGear className="w-6 h-6 text-neutral-700" />}
+            name={"Billing Information"}
+            icon={<FaMoneyBill className="w-6 h-6 text-neutral-700" />}
           >
-            <h1>Account Information</h1>
+            <h1>Billing Information</h1>
           </ProfileAccordion>
         </div>
       </section>
