@@ -3,7 +3,7 @@ import React from "react";
 const OrderItemCard = ({ data }) => {
   return (
     <div className="flex justify-between items-center">
-      <div className="flex">
+      <div className="grid grid-cols-1 md:grid-cols-2">
         <img
           src="https://dlcdnwebimgs.asus.com/gain/d5e3167c-efa8-46ce-bd78-65a4e99af3f6/w800"
           alt={data.name}
@@ -22,7 +22,7 @@ const OrderItemCard = ({ data }) => {
           </h2>
         </div>
       </div>
-      <h2 className="font-semibold text-base md:text-lg">
+      <h2 className="font-semibold text-sm md:text-lg">
         {(data.price * data.quantity).toLocaleString("id-ID", {
           style: "currency",
           currency: "IDR",
