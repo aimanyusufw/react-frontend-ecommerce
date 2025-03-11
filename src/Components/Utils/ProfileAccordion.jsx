@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaChevronDown, FaList } from "react-icons/fa6";
 
-const ProfileAccordion = ({ children, icon, name, defaultOpen = false }) => {
+const ProfileAccordion = ({ children, icon, name, defaultOpen = true }) => {
   const [isOpen, setIsOpen] = useState(defaultOpen);
 
   return (
