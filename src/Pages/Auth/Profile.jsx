@@ -1,15 +1,9 @@
 import React from "react";
 import BaseLayouts from "../../Layouts/BaseLayouts";
 import { Avatar } from "flowbite-react";
-import {
-  FaArrowRight,
-  FaCartShopping,
-  FaMapLocation,
-  FaMoneyBill,
-  FaUserGear,
-} from "react-icons/fa6";
+import { FaMapLocation, FaMoneyBill, FaUserGear } from "react-icons/fa6";
 import ProfileAccordion from "../../Components/Utils/ProfileAccordion";
-import OrderItemCard from "../../Components/Ui/Cards/OrderItemCard";
+import BackButton from "../../Components/Utils/BackButton";
 
 const Profile = () => {
   return (
