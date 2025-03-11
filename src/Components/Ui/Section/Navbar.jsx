@@ -1,7 +1,8 @@
 import React from "react";
 import { Avatar, Dropdown, Navbar } from "flowbite-react";
 import SearchInput from "../../Utils/SearchInput";
-import { FaCartShopping } from "react-icons/fa6";
+import { Link } from "react-router-dom";
+import { FiChevronLeft } from "react-icons/fi";
 
 const NavbarComp = () => {
   return (
@@ -13,25 +14,18 @@ const NavbarComp = () => {
           alt="Flowbite React Logo"
         />
       </Navbar.Brand>
-      <div className="flex w-full md:w-3/4 lg:w-1/2 md:order-2">
+      <div className="flex gap-2 justify-between items-center w-full md:w-3/4 lg:w-2/5 md:order-2">
+        <Link to={-1} className="md:hidden">
+          <FiChevronLeft size={26} />
+        </Link>
         <SearchInput />
-        <a
-          href="/cart"
-          type="button"
-          className="relative inline-flex items-center ext-sm font-medium text-center mx-4"
-        >
-          <FaCartShopping className="w-5 h-5" />
-          <span class="sr-only">Notifications</span>
-          <div class="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -end-2 dark:border-gray-900">
-            20
-          </div>
-        </a>
 
         <Dropdown
           arrowIcon={false}
           inline
           label={
             <Avatar
+              className="w-10"
               alt="User settings"
               img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
               rounded
