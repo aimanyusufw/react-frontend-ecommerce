@@ -6,6 +6,7 @@ const QuantityPicker = ({
   setQuantity = () => {},
   stock = 1,
   size = "lg",
+  className = "",
 }) => {
   if (!["sm", "lg"].includes(size)) {
     console.error("Invalid size prop. Only 'sm' or 'lg' are allowed.");
@@ -24,7 +25,7 @@ const QuantityPicker = ({
 
   return (
     <div
-      className={`${
+      className={`${className} ${
         size === "sm" ? "w-20 p-1" : "w-32 p-1.5"
       } flex rounded-lg border-2`}
     >

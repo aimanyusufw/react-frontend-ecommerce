@@ -14,6 +14,15 @@ const Cart = () => {
       stock: "20",
       quantity: 1,
     },
+    {
+      title: "ASUS TUF GAMING A16",
+      category: "Laptop",
+      img: "https://dlcdnwebimgs.asus.com/gain/d5e3167c-efa8-46ce-bd78-65a4e99af3f6/w800",
+      price: 16000000,
+      salePrice: 14000000,
+      stock: "20",
+      quantity: 1,
+    },
   ];
 
   const [quantities, setQuantities] = useState(
@@ -53,23 +62,33 @@ const Cart = () => {
           <div className="space-y-4">
             {productsDis.map((data, index) => (
               <div
-                className={`flex py-4 justify-between items-center ${
+                className={`flex flex-wrap lg:flex-nowrap justify-between py-4 lg:py-0 items-center ${
                   index !== productsDis.length - 1 ? "border-b" : ""
                 }`}
               >
-                <img
-                  src={data.img}
-                  alt={data.title}
-                  className="w-12 md:w-24 lg:w-32"
-                />
-                <div className="w-2/5 md:w-3/5 ms-2 md:ms-4 space-y-1 md:space-y-2">
-                  <h1 className="font-medium text-sm md:text-lg truncate">
-                    {data.title}
-                  </h1>
-                  <h5 className="font-medium text-xs md:text-sm text-gray-500">
-                    Stock : {data.stock}
-                  </h5>
-                  <div>
+                <div className="grid grid-cols-4 items-start lg:items-center w-full ">
+                  <img src={data.img} alt={data.title} className="w-full" />
+                  <div className="col-span-3 ms-2 md:ms-4 space-y-1 md:space-y-2 ">
+                    <h1 className="font-medium text-sm md:text-lg truncate">
+                      {data.title}
+                    </h1>
+                    <h5 className="font-medium text-xs md:text-sm text-gray-500">
+                      Stock : {data.stock}
+                    </h5>
+                    <div className="hidden lg:block">
+                      {data.price && (
+                        <span className="text-xs md:text-sm text-red-400 line-through">
+                          Rp {data.price.toLocaleString("id-ID")}
+                        </span>
+                      )}
+                      <h5 className="text-sm md:text-base font-medium text-gray-900 dark:text-white">
+                        Rp {data.salePrice.toLocaleString("id-ID") ?? "Rp -"}
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+                <div className="w-full lg:w-auto flex justify-between lg:justify-start">
+                  <div className="lg:hidden">
                     {data.price && (
                       <span className="text-xs md:text-sm text-red-400 line-through">
                         Rp {data.price.toLocaleString("id-ID")}
@@ -79,8 +98,6 @@ const Cart = () => {
                       Rp {data.salePrice.toLocaleString("id-ID") ?? "Rp -"}
                     </h5>
                   </div>
-                </div>
-                <div>
                   <div className="flex">
                     <QuantityPicker
                       quantity={quantities[index]}
