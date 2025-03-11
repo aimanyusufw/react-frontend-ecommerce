@@ -124,7 +124,7 @@ const DetailProduct = () => {
 
   return (
     <BaseLayouts>
-      <div className="py-12 min-h-screen">
+      <div className="md:py-4 py-12 min-h-screen">
         <div className="container">
           <div className="md:px-4 grid col-span-1 md:grid-cols-2 md:gap-2  gap-4">
             <div className="w-full mb-8 md:mb-0">

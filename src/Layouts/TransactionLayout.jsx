@@ -6,7 +6,7 @@ const TransactionLayout = ({ heading, subHeading, children }) => {
     <BaseLayouts>
       <section className="min-h-screen">
         <div className="container">
-          <div className="md:px-4 py-12">
+          <div className="md:px-4 py-4 md:py-12">
             <h1 className="font-semibold text-xl md:text-3xl mb-2">
               {heading ? heading : "Default Heading"}
             </h1>
