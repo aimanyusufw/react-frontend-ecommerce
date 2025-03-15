@@ -3,7 +3,6 @@ import BaseLayouts from "../../Layouts/BaseLayouts";
 import { Avatar } from "flowbite-react";
 import { FaMapLocation, FaMoneyBill, FaUserGear } from "react-icons/fa6";
 import ProfileAccordion from "../../Components/Utils/ProfileAccordion";
-import BackButton from "../../Components/Utils/BackButton";
 
 const Profile = () => {
   return (
