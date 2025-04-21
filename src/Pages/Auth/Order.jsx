@@ -26,15 +26,14 @@ const Order = () => {
                   onClick={() => setActiveTab(data.tab)}
                   className={`text-start px-4 py-3 w-full rounded-md transition-colors duration-200 ${
                     activeTab === data.tab
-                      ? "bg-blue-500"
-                      : "hover:bg-blue-500 hover:text-white text-black"
-                  } text-white`}
+                      ? "bg-black text-white"
+                      : "hover:bg-black hover:text-white"
+                  } text-black`}
                 >
                   {data.placeholder}
                 </button>
               ))}
             </div>
-
             <div className="p-5 border rounded-md col-span-3">
               {activeTab === "all" && <h1>All Orders</h1>}
               {activeTab === "unpaid" && <h1>Unpaid Orders</h1>}
