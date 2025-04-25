@@ -4,6 +4,7 @@ import { FaCartShopping } from "react-icons/fa6";
 import ProductsSection from "../Components/Ui/Section/ProductsSection";
 import QuantityPicker from "../Components/Utils/QuantityPicker";
 import ProductsDescriptionSection from "../Components/Ui/Section/ProductsDescriptionSection copy";
+import ProductsReviewSection from "../Components/Ui/Section/ProductsReviewSection";
 
 const DetailProduct = () => {
   const products = [
@@ -210,6 +211,7 @@ const DetailProduct = () => {
           ></div>
         </div>
         <ProductsDescriptionSection title={"Product Description"} />
+        <ProductsReviewSection title={"Product Review"} />
         <ProductsSection title={"Recomended Product"} data={products} />
       </div>
     </BaseLayouts>
