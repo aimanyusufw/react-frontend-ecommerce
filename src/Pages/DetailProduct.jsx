@@ -3,6 +3,7 @@ import BaseLayouts from "../Layouts/BaseLayouts";
 import { FaCartShopping } from "react-icons/fa6";
 import ProductsSection from "../Components/Ui/Section/ProductsSection";
 import QuantityPicker from "../Components/Utils/QuantityPicker";
+import ProductsDescriptionSection from "../Components/Ui/Section/ProductsDescriptionSection copy";
 
 const DetailProduct = () => {
   const products = [
@@ -208,6 +209,7 @@ const DetailProduct = () => {
             dangerouslySetInnerHTML={{ __html: product.description }}
           ></div>
         </div>
+        <ProductsDescriptionSection title={"Product Description"} />
         <ProductsSection title={"Recomended Product"} data={products} />
       </div>
     </BaseLayouts>
