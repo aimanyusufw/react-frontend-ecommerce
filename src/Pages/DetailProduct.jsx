@@ -206,7 +206,7 @@ const DetailProduct = () => {
             </div>
           </div>
           <div
-            className="mt-5 md:mt-8 md:px-4"
+            className="mt-5 md:mt-8 space-y-8 md:px-4"
             dangerouslySetInnerHTML={{ __html: product.description }}
           ></div>
         </div>
